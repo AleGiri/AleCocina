@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('../images/fondococina.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 3rem;
+    opacity: 0.6;
+    transition: all 0.5s;
+    &:hover {
+        transform: scale(1.2) translateY(-1rem);
+    
+    }
+}

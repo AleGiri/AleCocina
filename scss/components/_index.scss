@@ -1,0 +1,17 @@
+.preview-bs {
+    @include text-values('Poppins', flex)
+}
+
+
+.inicio,
+.nosotros {
+    @include text-values('Poppins', grid);
+    grid-template-columns: 4fr 1fr;
+
+    .imagen-parrafo {
+        width: $imageSizeIndex;
+        margin: 0.6rem;
+        border-radius: $imageBorderRadius;
+        align-self: center;
+    }
+}

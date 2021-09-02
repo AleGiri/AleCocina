@@ -1,0 +1,43 @@
+.sub-category {
+    background-color: $contentBackgroundColor2;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    display: flex;
+    border-radius: 0;
+}
+
+.recetas {
+    @include text-values('Poppins', flex);
+    flex-direction: column;
+
+    .recetas-top-div {
+
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+
+        .ingredientes {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+        }
+
+        .foto-recetas {
+            display: flex;
+            justify-self: right;
+            border-radius: $imageBorderRadiusLeft;
+        }
+
+        .foto-recetas-mobile {
+            display: none
+        }
+    }
+
+}

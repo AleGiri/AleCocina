@@ -1,0 +1,19 @@
+@mixin text-values($font, $display) {
+    background-color: $contentBackgroundColor2;
+    border-radius: $textBorderRadius;
+    margin: 1rem;
+    font-family: $font;
+    display: $display;
+}
+
+@mixin fall-height($mobileFall) {
+    z-index: $mobileFall;
+
+    @if $mobileFall==-10 {
+        transform: translateY(400%) rotateZ(180deg);
+    }
+
+    @else {
+        transform: translateY(800%) rotateZ(180deg)
+    }
+}

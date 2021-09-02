@@ -1,0 +1,208 @@
+@media only screen and (max-width: 576px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-logo {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .navi {
+        width: 100%;
+        justify-content: center;
+
+        nav {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            ul {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 0;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+
+                    &:hover ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    .inicio,
+    .nosotros,
+    .parrafos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+
+        .imagen-parrafo {
+            width: 80%;
+            height: 80%;
+            margin: 1rem;
+
+        }
+    }
+
+    h2 {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    footer {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .preview-bs {
+        display: none;
+    }
+
+    .foto-recetas {
+        display: none !important;
+    }
+
+    .recetas-top-div {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem;
+        text-align: center;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .foto-recetas-mobile {
+            display: flex !important;
+
+            width: 60%;
+            border-radius: $imageBorderRadius;
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-logo {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .navi {
+        display: flex;
+        padding-bottom: 1rem;
+        flex-wrap: wrap;
+
+        li {
+            display: flex;
+            flex-direction: column;
+
+            &:hover ul {
+                display: none;
+            }
+        }
+    }
+
+
+
+    .inicio,
+    .nosotros,
+    .parrafos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+
+        .imagen-parrafo {
+            width: 80%;
+            height: 80%;
+            margin: 1rem;
+
+        }
+    }
+
+    h2 {
+        text-align: center;
+        padding-left: 0;
+    }
+
+
+    .preview-bs {
+        display: none;
+    }
+
+    .foto-recetas {
+        display: none !important;
+    }
+
+    .recetas-top-div {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .foto-recetas-mobile {
+            display: flex !important;
+            width: 60%;
+            border-radius: $imageBorderRadius;
+        }
+
+        .ingredientes {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
+
+    .fall {
+        z-index: -9;
+        width: 80%;
+
+        @keyframes drop {
+            0% {
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                @include fall-height(-9);
+                opacity: 0;
+            }
+        }
+    }
+}

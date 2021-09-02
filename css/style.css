@@ -1,0 +1,442 @@
+/* General values */
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.36rem;
+  padding-left: 2rem;
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.9rem;
+}
+
+h3 {
+  padding-top: 1rem;
+  font-family: "Poppins";
+  font-size: 1.36rem;
+  text-decoration: underline;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../images/fondococina.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 3rem;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+.scroll-top:hover {
+  transform: scale(1.2) translateY(-1rem);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: space-around;
+  align-items: center;
+}
+header .main-logo {
+  width: 40%;
+}
+header nav ul {
+  padding: 0;
+}
+header nav ul ul {
+  display: none;
+  position: absolute;
+  padding-top: 5rem;
+}
+header nav ul ul li {
+  margin: 0, 5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+header nav ul li {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  padding: 0.3rem 2.81rem;
+  margin: 0.3rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.9rem;
+  text-align: center;
+}
+header nav ul li:hover {
+  color: black;
+  text-decoration: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header nav ul li a:hover {
+  color: black;
+}
+header nav ul li:hover ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+header nav ul .boton-grad {
+  background-image: linear-gradient(to right, #ece9e6 0%, #ffffff 51%, #3d3d3d46 100%);
+  transition: 0s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: inline-block;
+}
+header nav ul .boton-grad:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+
+footer {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+footer .fall {
+  z-index: -10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: content-box;
+}
+footer .fall img {
+  width: 5rem;
+  height: 5rem;
+  animation: drop 5s infinite linear;
+  animation-iteration-count: infinite;
+}
+footer .fall .pepper,
+footer .fall .corn {
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+footer .fall .lettuce,
+footer .fall .meat {
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+footer .fall .carrot {
+  animation-delay: 0.9s;
+  opacity: 0;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    z-index: -10;
+    transform: translateY(400%) rotateZ(180deg);
+    opacity: 0;
+  }
+}
+footer .footer-info {
+  z-index: 10;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+footer .footer-info #contacto {
+  margin: 1rem;
+}
+footer .footer-info #contacto .contacto-redes {
+  padding-left: 0;
+}
+footer .footer-info #contacto .logo {
+  width: 6.25rem;
+  margin: 0.5rem;
+  transition: all 0.5s;
+}
+footer .footer-info #contacto .logo:hover {
+  transform: scale(1.1);
+}
+footer .footer-info .receta-input {
+  padding: 0;
+}
+
+.preview-bs {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.9rem;
+  margin: 1rem;
+  font-family: "Poppins";
+  display: flex;
+}
+
+.inicio,
+.nosotros {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.9rem;
+  margin: 1rem;
+  font-family: "Poppins";
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.inicio .imagen-parrafo,
+.nosotros .imagen-parrafo {
+  width: 21rem;
+  margin: 0.6rem;
+  border-radius: 0.6rem;
+  align-self: center;
+}
+
+.sub-category {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 1rem;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+  display: flex;
+  border-radius: 0;
+}
+
+.recetas {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.9rem;
+  margin: 1rem;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+}
+.recetas .recetas-top-div {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.recetas .recetas-top-div .ingredientes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.recetas .recetas-top-div .ingredientes ul {
+  padding: 0;
+  list-style: none;
+}
+.recetas .recetas-top-div .foto-recetas {
+  display: flex;
+  justify-self: right;
+  border-radius: 0 0.9rem 0.9rem 0;
+}
+.recetas .recetas-top-div .foto-recetas-mobile {
+  display: none;
+}
+
+.parrafos {
+  font-size: 105%;
+  margin: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-logo {
+    justify-content: center;
+    width: 90%;
+  }
+
+  .navi {
+    width: 100%;
+    justify-content: center;
+  }
+  .navi nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navi nav ul {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .navi nav ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  .navi nav ul li:hover ul {
+    display: none;
+  }
+
+  .inicio,
+.nosotros,
+.parrafos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .inicio .imagen-parrafo,
+.nosotros .imagen-parrafo,
+.parrafos .imagen-parrafo {
+    width: 80%;
+    height: 80%;
+    margin: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  footer {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .preview-bs {
+    display: none;
+  }
+
+  .foto-recetas {
+    display: none !important;
+  }
+
+  .recetas-top-div {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-align: center;
+  }
+  .recetas-top-div ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .recetas-top-div .foto-recetas-mobile {
+    display: flex !important;
+    width: 60%;
+    border-radius: 0.6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-logo {
+    justify-content: center;
+    width: 90%;
+  }
+
+  .navi {
+    display: flex;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .navi li {
+    display: flex;
+    flex-direction: column;
+  }
+  .navi li:hover ul {
+    display: none;
+  }
+
+  .inicio,
+.nosotros,
+.parrafos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  .inicio .imagen-parrafo,
+.nosotros .imagen-parrafo,
+.parrafos .imagen-parrafo {
+    width: 80%;
+    height: 80%;
+    margin: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .preview-bs {
+    display: none;
+  }
+
+  .foto-recetas {
+    display: none !important;
+  }
+
+  .recetas-top-div {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .recetas-top-div ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .recetas-top-div .foto-recetas-mobile {
+    display: flex !important;
+    width: 60%;
+    border-radius: 0.6rem;
+  }
+  .recetas-top-div .ingredientes {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .fall {
+    z-index: -9;
+    width: 80%;
+  }
+  @keyframes drop {
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      z-index: -9;
+      transform: translateY(800%) rotateZ(180deg);
+      opacity: 0;
+    }
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
