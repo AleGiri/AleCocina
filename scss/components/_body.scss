@@ -16,8 +16,35 @@ body {
     width: 3rem;
     opacity: 0.6;
     transition: all 0.5s;
+
     &:hover {
         transform: scale(1.2) translateY(-1rem);
-    
+
+    }
+}
+
+.not-found {
+    align-self: center;
+    justify-content: space-around;
+    @include text-values('Poppins', flex);
+    flex-direction: row;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 5%;
+    flex-wrap: wrap;
+
+    .error-numb {
+        h3 {
+            font-size: 500%
+        }
+
+        p {
+            font-size: xx-large;
+        }
+    }
+
+    .error-msg {
+        align-self: center;
     }
 }
