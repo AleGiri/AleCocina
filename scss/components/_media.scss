@@ -66,7 +66,9 @@
         border-radius: 0;
     }
 
-    .lettuce, .carrot, .chick {
+    .lettuce,
+    .carrot,
+    .chick {
         display: none;
     }
 
@@ -185,7 +187,7 @@
             padding-right: 5rem;
         }
     }
-    
+
 
     .fall {
         width: 80%;
