@@ -341,7 +341,9 @@ footer .footer-info .receta-input {
     border-radius: 0;
   }
 
-  .lettuce, .carrot, .chick {
+  .lettuce,
+.carrot,
+.chick {
     display: none;
   }
 

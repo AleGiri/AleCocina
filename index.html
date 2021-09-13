@@ -189,14 +189,19 @@
           <div class="mb-3">
             <h2 class="receta-input">Dejanos tu receta</h2>
             <label for="exampleFormControlInput1" class="form-label">Nombre y apellido</label>
-            <input type="text" name="nombreApellido" class="form-control" id="exampleFormControlInput1"
-              placeholder="Nombre y apellido">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" name="_replyto" class="form-control" id="exampleFormControlInput1"
-              placeholder="ejemplo@gmail.com">
-            <label for="exampleFormControlTextarea1" class="form-label mt-3">Tu receta</label>
-            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="6"
-              cols="50"></textarea>
+            <input type="text" name="Nombre y apellido" class="form-control" id="exampleFormControlInput1"
+              placeholder="Nombre y apellido" required
+              oninvalid="this.setCustomValidity('Por favor ingresa tu nombre y apellido aqui')"
+              oninput="this.setCustomValidity('')">
+            <label for="exampleFormControlInput2" class="form-label mt-2">Email</label>
+            <input type="email" name="Correo electronico" class="form-control" id="exampleFormControlInput1"
+              placeholder="ejemplo@gmail.com" required
+              oninvalid="this.setCustomValidity('Por favor ingresa tu Email aqui')"
+              oninput="this.setCustomValidity('')">
+            <label for="exampleFormControlTextarea1" class="form-label mt-2">Tu receta</label>
+            <textarea name="Receta" class="form-control" id="exampleFormControlTextarea1" rows="6" cols="50" required
+              oninvalid="this.setCustomValidity('Por favor ingresa tu receta aqui')"
+              oninput="this.setCustomValidity('')"></textarea>
             <button type="submit" class="btn btn-light mt-3">Enviar</button>
           </div>
         </form>
